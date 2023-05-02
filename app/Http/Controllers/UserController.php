@@ -24,6 +24,7 @@ class UserController extends Controller
         return view('users.register');
     }
 
+    //create user
     public function store(Request $request)
     {
         $formFields = $request->validate([
@@ -65,6 +66,11 @@ class UserController extends Controller
                 'name' => 'required',
                 'email' => ['required', Rule::unique('users', 'email')->ignore($user->id)],
             ]);
+
+            if (auth()->user()->role_id == 1 && request()->role_id != null) { //ovo je neki dodatni uvjet u slucaju da korisnik napravi custom formu pomocu koje bi ostvario prava koja mu nisu dozvoljena
+                $formFields['role_id'] = request()->role_id;
+            }
+
             $user->update($formFields);
             return redirect('/')->with('message', 'User updated succesfully!');
         } else {

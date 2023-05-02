@@ -40,42 +40,24 @@
         @enderror
     </div>
 
-    <div class="mb-6">
-        <label
-            for="password"
-            class="inline-block text-lg mb-2"
-        >
-            Password
-        </label>
-        <input
-            type="password"
-            class="border border-gray-200 rounded p-2 w-full"
-            name="password"
-            value=""
-        />
-        @error('password')
-        <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-        @enderror
-    </div>
 
+    @if (auth()->user()->role_id == 1) {{-- input za biranje uloga moze vidjeti samo admin --}}
     <div class="mb-6">
-        <label
-            for="password_confirmation"
-            class="inline-block text-lg mb-2"
+        <label for="role_id" class="inline-block text-lg mb-2"
+            >Role</label
         >
-            Confirm Password
-        </label>
-        <input
-            type="password"
-            class="border border-gray-200 rounded p-2 w-full"
-            name="password_confirmation"
-            value=""
-        />
-        @error('password_confirmation')
-        <p class="text-red-500 text-xs mt-1">{{$message}}</p>
-        @enderror
+        <select name="role_id" class="border border-gray-200 rounded p-2 w-full">  {{-- select je postavljen na postojecu ulogu korisnika --}}
+            @if ($user->role_id == 1)
+            <option value="1" selected>administrator</option>
+            <option value="2">editor</option>
+            @else
+            <option value="1">administrator</option>
+            <option value="2" selected>editor</option> 
+            @endif
+        </select>
     </div>
-
+    @endif
+ 
     <div class="mb-6">
         <button
             type="submit"
