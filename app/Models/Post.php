@@ -16,9 +16,9 @@ class Post extends Model
         if ($filters['tag'] ?? false) { //ako je $filters['tag'] truty izvrsi kod u zagradama 
             $query->where('tags', 'like', '%' . request('tag') . '%');
         };
-        if ($filters['search'] ?? false) { //ako je $filters['tag'] truty izvrsi kod u zagradama 
+        if ($filters['search'] ?? false) { //ako je $filters['search'] truty izvrsi kod u zagradama 
             $query->where('title', 'like', '%' . request('search') . '%')
-                ->orWhere('description', 'like', '%' . request('search') . '%')
+                ->orWhere('content', 'like', '%' . request('search') . '%')
                 ->orWhere('tags', 'like', '%' . request('search') . '%');
         };
     }

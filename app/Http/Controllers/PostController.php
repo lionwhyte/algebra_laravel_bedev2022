@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
 
 class PostController extends Controller
 {
@@ -104,7 +103,7 @@ class PostController extends Controller
     }
 
     //manage posts
-    public function manage(Post $post)
+    public function manage(Post $post, User $user)
     {
         if (auth()->user()->role_id == 1) {
             return view('posts.manage', ['posts' => $post->all()]);

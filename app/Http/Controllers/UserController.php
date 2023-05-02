@@ -89,9 +89,6 @@ class UserController extends Controller
         }
     }
 
-
-
-
     //logout
     public function logout(Request $request)
     {
