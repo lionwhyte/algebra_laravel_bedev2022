@@ -28,7 +28,7 @@
                     class="px-4 py-8 border-t border-b border-gray-300 text-lg"
                 >
                     <a
-                        href="/bedev2022/public/users/{{$user->id}}/edit"
+                        href="/users/{{$user->id}}/edit"
                         class="text-blue-400 px-6 py-2 rounded-xl"
                         ><i
                             class="fa-solid fa-pen-to-square"
@@ -39,7 +39,7 @@
                 <td
                     class="px-4 py-8 border-t border-b border-gray-300 text-lg"
                 >
-                    <form action="/bedev2022/public/users/{{$user->id}}" method="post">
+                    <form action="/users/{{$user->id}}" method="post">
                         @csrf
                         @method('delete')
                         <button class="text-red-500"><i class="fa-solid fa-trash"> Delete</i></button>

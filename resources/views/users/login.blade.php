@@ -8,7 +8,7 @@
     <p class="mb-4">Log into your account</p>
 </header>
 
-<form action="/bedev2022/public/users/authenticate" method="POST">
+<form action="/users/authenticate" method="POST">
     @csrf
 
     <div class="mb-6">
@@ -56,7 +56,7 @@
     <div class="mt-8">
         <p>
             Don't have an account?
-            <a href="/bedev2022/public/register" class="text-laravel"
+            <a href="/register" class="text-laravel"
                 >Register</a
             >
         </p>

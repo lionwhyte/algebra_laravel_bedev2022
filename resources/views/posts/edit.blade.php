@@ -10,7 +10,7 @@
     <p class="mb-4">Edit: {{$post->title}}</p>
 </header>
 
-<form method="POST" action="/bedev2022/public/posts/{{$post->id}}" enctype="multipart/form-data">
+<form method="POST" action="/posts/{{$post->id}}" enctype="multipart/form-data">
     @csrf
     @method('PUT')
     <div class="mb-6">

@@ -7,7 +7,7 @@
     </h2>
 </header>
 
-<form action="/bedev2022/public/users/{{$user->id}}" method="POST">
+<form action="/users/{{$user->id}}" method="POST">
     @csrf
     @method('PUT')
     <div class="mb-6">

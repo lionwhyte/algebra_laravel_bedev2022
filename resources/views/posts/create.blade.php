@@ -9,7 +9,7 @@
     </h2>
 </header>
 
-<form method="POST" action="/bedev2022/public/posts" enctype="multipart/form-data">
+<form method="POST" action="/posts" enctype="multipart/form-data">
     @csrf
     <div class="mb-6">
         <label for="title" class="inline-block text-lg mb-2"

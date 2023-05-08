@@ -29,7 +29,7 @@
     </head>
     <body class="mb-48">
         <nav class="flex justify-between items-center mb-4">
-            <a href="/bedev2022/public/"
+            <a href="/"
                 ><img class="w-24" src="{{asset('images/no-image.png')}}" alt="" class="logo"
             /></a>
             <ul class="flex space-x-6 mr-6 text-lg">
@@ -38,19 +38,19 @@
                     <span class="font.bold uppercase">Welcome {{auth()->user()->name}}</span>
                 </li>
                 <li>
-                    <a href="/bedev2022/public/posts/manage" class="hover:text-laravel"
+                    <a href="/posts/manage" class="hover:text-laravel"
                         ><i class="fa-solid fa-gear"></i>
                         Manage Posts</a
                     >
                 </li>
                 <li>
-                    <a href="/bedev2022/public/users" class="hover:text-laravel"
+                    <a href="/users" class="hover:text-laravel"
                         ><i class="fa-solid fa-gear"></i>
                         User settings</a
                     >
                 </li>
                 <li>
-                    <form class="inline" action="/bedev2022/public/logout" method="post">
+                    <form class="inline" action="/logout" method="post">
                         @csrf
                         <button type="submit">
                             <i class="fa-solid fa-door-closed"> Logout</i>
@@ -60,12 +60,12 @@
 
                 @else
                 <li>
-                    <a href="/bedev2022/public/register" class="hover:text-laravel"
+                    <a href="/register" class="hover:text-laravel"
                         ><i class="fa-solid fa-user-plus"></i> Register</a
                     >
                 </li>
                 <li>
-                    <a href="/bedev2022/public/login" class="hover:text-laravel"
+                    <a href="/login" class="hover:text-laravel"
                         ><i class="fa-solid fa-arrow-right-to-bracket"></i>
                         Login</a
                     >
@@ -80,7 +80,7 @@
             class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center"
         >
             <a
-                href="/bedev2022/public/posts/create"
+                href="/posts/create"
                 class="absolute top-1/3 center-10 bg-black text-white py-2 px-5"
                 >Create Post</a
             >

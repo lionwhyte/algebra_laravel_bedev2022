@@ -10,7 +10,7 @@
         <div>
             <div class="text-xl font-bold mb-4">{{$post->title}}</div>
             <p>
-                <a href="/bedev2022/public/posts/{{$post->id}}">{{$post->content}}</a>
+                <a href="/posts/{{$post->id}}">{{$post->content}}</a>
             </p>
             <div class="text-lg mt-4 mb-4">
                 <i class="fa-solid fa-location-dot"></i> {{$post->location}}

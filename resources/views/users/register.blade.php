@@ -7,7 +7,7 @@
     </h2>
 </header>
 
-<form action="/bedev2022/public/users" method="POST">
+<form action="/users" method="POST">
     @csrf
     <div class="mb-6">
         <label for="name" class="inline-block text-lg mb-2">
@@ -87,7 +87,7 @@
     <div class="mt-8">
         <p>
             Already have an account?
-            <a href="/bedev2022/public/login" class="text-laravel"
+            <a href="/login" class="text-laravel"
                 >Login</a
             >
         </p>
